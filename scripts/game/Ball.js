@@ -37,7 +37,7 @@ export class Ball extends GameObject{
     }
 
     goUp(){
-        if(this.top > this.game.canvas.top){
+        if(this.top > this.game.canvas.top + 40){
             this.y -= this.speed;
         }else{
             this.invertY();
