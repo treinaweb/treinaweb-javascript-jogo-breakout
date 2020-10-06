@@ -1,4 +1,5 @@
 import {Game} from './scripts/game-engine/game.js';
+import {Paddle} from './scripts/game/Paddle.js';
 
 Game.constructor();
 Promise.all([
@@ -6,7 +7,17 @@ Promise.all([
     Game.ImageManager.loadAll([])
 ])
 .then(() => {
-    Game.start();
-    
-    
+    startGame();
 });
+
+
+
+function startGame(){
+    Game.start();
+
+    const paddle = new Paddle();
+
+    Game.addObject(paddle);
+
+
+}
